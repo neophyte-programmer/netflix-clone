@@ -16,6 +16,8 @@ This is a netflix clone project. It has multiple pages which are linked together
 - Effective debugging
 - State Management
 
+## Notes to remember
+- `...restProps` is used to to pass props to the component and its children.
 
 ## Resources Used
 - [npm](https://www.npmjs.com/)
