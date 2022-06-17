@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react'
+import Jumbotron from './components/jumbotron/jumbotron'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
+    <div>
+      <Jumbotron />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
