@@ -1,17 +1,30 @@
 import React, { useState } from 'react'
 import { createContext, useContext } from 'react'
-import { Container, Inner, Title, Frame, Item, Header, Body } from './styles/accordion'
+import {
+	Container,
+	Inner,
+	Title,
+	Frame,
+	Item,
+	Header,
+	Body,
+} from './styles/accordion'
 
 // Context is a React component that provides the value of the state
 const ToggleContext = createContext()
 
-const Accordion = ({ children, ...restProps }) => {
+export const Accordion = ({ children, ...restProps }) => {
 	return (
 		<Container {...restProps}>
 			<Inner>{children}</Inner>
 		</Container>
 	)
 }
+
+const AccordionContainer = ({ children, ...restProps }) => {
+	return <Container {...restProps}>{children}</Container>
+}
+Accordion.Container = AccordionContainer
 
 const AccordionTitle = ({ children, ...restProps }) => {
 	return <Title {...restProps}>{children}</Title>
@@ -24,10 +37,10 @@ const AccordionFrame = ({ children, ...restProps }) => {
 Accordion.Frame = AccordionFrame
 
 const AccordionItem = ({ children, ...restProps }) => {
-    // Managing the state of the accordion item
+	// Managing the state of the accordion item
 	const [toggleShow, setToggleShow] = useState(false)
-    return (
-        // ToggleContext.Provider is a React component that provides the context
+	return (
+		// ToggleContext.Provider is a React component that provides the context
 		<ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
 			<Item {...restProps}>{children}</Item>
 		</ToggleContext.Provider>
@@ -36,11 +49,14 @@ const AccordionItem = ({ children, ...restProps }) => {
 Accordion.Item = AccordionItem
 
 const AccordionHeader = ({ children, ...restProps }) => {
-    // We need to use useContext to access the toggleShow state
-    const { toggleShow, setToggleShow } = useContext(ToggleContext)
-    return (
-        // Onclick, pass the previous state and invert it
-		<Header onClick={() => setToggleShow((toggleShow) => !toggleShow)} {...restProps}>
+	// We need to use useContext to access the toggleShow state
+	const { toggleShow, setToggleShow } = useContext(ToggleContext)
+	return (
+		// Onclick, pass the previous state and invert it
+		<Header
+			onClick={() => setToggleShow((toggleShow) => !toggleShow)}
+			{...restProps}
+		>
 			{children}
 		</Header>
 	)
@@ -48,12 +64,12 @@ const AccordionHeader = ({ children, ...restProps }) => {
 Accordion.Header = AccordionHeader
 
 const AccordionBody = ({ children, ...restProps }) => {
-    // We need to use useContext to access the toggleShow state
-    const { toggleShow } = useContext(ToggleContext)
-    
-    // If the state is true, display the body
-    return toggleShow ? <Body {...restProps}>{children}</Body> : null
+	// We need to use useContext to access the toggleShow state
+	const { toggleShow } = useContext(ToggleContext)
+
+	// If the state is true, display the body
+	return toggleShow ? <Body {...restProps}>{children}</Body> : null
 }
 Accordion.Body = AccordionBody
 
-export default Accordion
+// export default Accordion
