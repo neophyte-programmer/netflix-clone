@@ -14,6 +14,7 @@ This is a netflix clone project. It has multiple pages which are linked together
 - Routing  
 - [Git Commmit Conventions](https://raw.githubusercontent.com/legend80s/commit-msg-linter/master/assets/demo-7-compressed.png)  
 - Effective debugging
+- State Management
 
 
 ## Resources Used
