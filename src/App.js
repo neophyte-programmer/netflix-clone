@@ -1,5 +1,5 @@
 import React from 'react'
-import { JumboContainer } from './containers/jumbotronContainer'
+import {JumboContainer}  from './containers/jumbotronContainer'
 
 const App = () => {
   return (

@@ -12,7 +12,7 @@ import {
 const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
 	return (
 		<Item {...restProps}>
-			<Inner direction={direction} >{children}</Inner>
+			<Inner direction={direction}>{children}</Inner>
 		</Item>
 	)
 }
