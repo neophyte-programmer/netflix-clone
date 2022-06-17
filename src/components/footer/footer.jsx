@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Column, Link, Break } from './styles/footer'
+import { Container, Row, Column, Link, Break, Title, Text } from './styles/footer'
 
 const Footer = ({children, ...restProps}) => {
   return (
@@ -14,20 +14,30 @@ const FooterRow = ({ children, ...restProps}) => {
 }
 Footer.Row = FooterRow
 
-const FooterColumn = ({ }) => {
-    return <Column>{children}</Column>
+const FooterColumn = ({ children, ...restProps}) => {
+    return <Column {...restProps}>{children}</Column>
 }
 Footer.Column = FooterColumn
 
-const FooterLink = ({ }) => {
-    return <Link>{children}</Link>
+const FooterLink = ({ children, ...restProps}) => {
+    return <Link {...restProps}>{children}</Link>
 }
 Footer.Link = FooterLink
 
-const FooterBreak = ({ }) => {
-    return <Break>{children}</Break>
+const FooterBreak = ({ children, ...restProps}) => {
+    return <Break {...restProps}>{children}</Break>
 }
 Footer.Break = FooterBreak
+
+const FooterTitle = ({ children, ...restProps}) => {
+    return <Title {...restProps}>{children}</Title>
+}
+Footer.Title = FooterTitle
+
+const FooterText = ({ children, ...restProps}) => {
+    return <Text {...restProps}>{children}</Text>
+}
+Footer.Text = FooterText
 
 
 export default Footer
