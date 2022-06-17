@@ -15,6 +15,7 @@ This is a netflix clone project. It has multiple pages which are linked together
 
 
 ## Resources Used
+- [npm](https://www.npmjs.com/)
 
 ## Demo 
 You can see the demo [here]()
