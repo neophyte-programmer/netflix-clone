@@ -4,7 +4,7 @@ This is a netflix clone project. It has multiple pages which are linked together
 * [React](https://reactjs.org/)
 * [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
 * [Firebase](https://firebase.google.com/)
-* [FuseJS](https://fusejs.com/)
+* [FuseJS](https://fusejs.io/)
 
 ## What I learned
 - Custom hooks
