@@ -3,11 +3,12 @@ import styled from 'styled-components/macro'
 export const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	height: 100%;
-	margin-top: 20px;
+	// height: 100%;
+	// margin-top: 20px;
 	flex-wrap: wrap;
+
 	@media (max-width: 1000px) {
-		flex-direction: column;
+		// flex-direction: column; This breaks my code my i am not removing it because i want to figure out why
 		align-items: center;
 	}
 `
