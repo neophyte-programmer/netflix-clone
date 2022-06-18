@@ -2,7 +2,7 @@
 This is a netflix clone project. It has multiple pages which are linked together including the homepage, login, signup, profile, watchlist, and search.
 ## Technologies Used
 * [React](https://reactjs.org/)
-* [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+* [React Router](https://reactrouter.com/docs/en/v6/getting-started/tutorial)
 * [Firebase](https://firebase.google.com/)
 * [FuseJS](https://fusejs.io/)
 * Normalize.css 
