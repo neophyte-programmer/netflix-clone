@@ -10,7 +10,7 @@ const Home = () => {
 	return (
 		<div>
 			<HeaderContainer>
-				<>
+				
 					<Feature>
 						<Feature.Title>
 							Unlimited movies, TV shows, and more.
@@ -28,7 +28,7 @@ const Home = () => {
 							<OptForm.Button>Get Started</OptForm.Button>
 						</OptForm>
 					</Feature>
-				</>
+				
 			</HeaderContainer>
 			<JumboContainer />
 			<AccordionContainer />
