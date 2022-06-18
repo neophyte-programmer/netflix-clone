@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
-import { Logo, ButtonLink, Background, Container, Frame } from './styles/header'
+import { Logo, ButtonLink, Background, Container} from './styles/header'
 
 
 // bg prop for dynamic background
