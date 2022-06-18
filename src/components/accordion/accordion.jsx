@@ -38,10 +38,10 @@ Accordion.Frame = AccordionFrame
 
 const AccordionItem = ({ children, ...restProps }) => {
 	// Managing the state of the accordion item
-	const [toggleShow, setToggleShow] = useState(false)
+	const [toggleShow, setToggleShow] = useState(false) // accordion is closed by default
 	return (
-		// ToggleContext.Provider is a React component that provides the context
-		<ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
+		// shares the state with the children (AccordionHeader and AccordionBody) 
+		<ToggleContext.Provider value={{ toggleShow, setToggleShow }}> 
 			<Item {...restProps}>{children}</Item>
 		</ToggleContext.Provider>
 	)
@@ -58,6 +58,13 @@ const AccordionHeader = ({ children, ...restProps }) => {
 			{...restProps}
 		>
 			{children}
+			{/* If the state is true, display the close img else display the add img*/}
+			{toggleShow ? (
+				<img src='./images/icons/close-slim.png' alt='close' />
+			) : (
+				<img src='./images/icons/add.png' alt='add' />
+			)}
+
 		</Header>
 	)
 }
