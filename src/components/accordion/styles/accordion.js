@@ -17,6 +17,10 @@ export const Inner = styled.div`
 
 export const Frame = styled.div`
 	margin-bottom: 40px;
+
+	@media (max-width: 600px) {
+		padding: 0 20px;
+	}
 `
 
 export const Item = styled.div`
