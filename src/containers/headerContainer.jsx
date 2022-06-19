@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/header/header'
 import * as ROUTES from '../constants/routes'
-import logo from '../logo.svg'
+import logo from '../logo.png'
 
 export const HeaderContainer = ({children}) => {
     return (
