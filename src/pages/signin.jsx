@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { FirebaseContext } from '../context/firebase'
 import { FooterContainer } from '../containers/footerContainer'
 import { HeaderContainer } from '../containers/headerContainer'
 import Form from '../components/form/form'
 
 const SignIn = () => {
+  const { firebase} = useContext(FirebaseContext)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [error, setError] = useState('')
@@ -14,6 +16,7 @@ const SignIn = () => {
 
     // implement Firebase 
   } 
+
   // If password or email is empty, isInvalid will be true
   const isInvalid = password === '' || email === ''
 
@@ -43,8 +46,9 @@ const SignIn = () => {
             <Form.Submit disabled={isInvalid} type="submit">Sign In</Form.Submit>
           </Form.Base>
           <Form.Text>New To Nutiflix? {' '}           
-          <Form.Link to='/signup'>Sign Up now</Form.Link>
+          <Form.Link to='/signup'>Sign up now</Form.Link>
           </Form.Text>
+          <Form.SmallText>This page is protected by Google reCAPTCHA to ensure you're not a bot</Form.SmallText>
 				</Form>
 			</HeaderContainer>
 			<FooterContainer> </FooterContainer>
