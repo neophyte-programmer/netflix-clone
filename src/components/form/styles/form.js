@@ -13,6 +13,10 @@ export const Container = styled.div`
 	max-width: 300px;
 	padding: 60px 68px 40px;
 	margin-bottom: 100px;
+
+	@media (max-width: 600px) {
+		padding: 30px 30px 20px;
+	}
 `
 export const Base = styled.form`
 	display: flex;
@@ -65,7 +69,7 @@ export const Input = styled.input`
 		margin-bottom: 30px;
 	}
 `
-export const Submit = styled.div`
+export const Submit = styled.button`
 	background: #e50914;
 	border-radius: 4px;
 	font-size: 16px;
@@ -76,6 +80,7 @@ export const Submit = styled.div`
 	color: white;
 	cursor: pointer;
     text-align: center;
+
 	&:disabled {
 		opacity: 0.5;
 	}

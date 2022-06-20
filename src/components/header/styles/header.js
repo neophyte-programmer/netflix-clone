@@ -13,7 +13,7 @@ export const Background = styled.div`
     height: 97vh;
 
     @media (max-width: 1000px) {
-        height: 60vh;
+        height: 70vh;
         
     }
 `
