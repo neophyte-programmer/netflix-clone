@@ -21,6 +21,22 @@ const SignUp = () => {
     e.preventDefault()
 
     // implement Firebase with promise
+    firebase.auth().createUserWithEmailAndPassword(email, password).then((result) => {
+      result.user.updateProfile({
+        // set the user's display name to the first name
+        displayName: firstName,
+        // set the user's photoURL to a random user image
+        photoURL: Math.floor(Math.random() * 5) + 1,
+      }).then(() => {
+        history.push(ROUTES.BROWSE)
+      })
+    }).catch((error) => {
+      // If there is an error, reset all the inputs and set the error to the error message
+      setFirstName('')
+      setEmail('')
+      setPassword('')
+      setError(error.message)
+    })
   }
 
   return (
