@@ -12,10 +12,12 @@ const useAuthListener = () => {
 
 	useEffect(() => {
 		const listener = firebase.auth().onAuthStateChanged((authUser) => {
-			if (authUser) {
+            if (authUser) {
+                // if there is an authenticated user, we want to store it in local storage
 				localStorage.setItem('authUser', JSON.stringify(authUser))
 				setUser(authUser)
-			} else {
+            } else {
+                // if there is no authenticated user, we want to remove it from local storage
 				localStorage.removeItem('authUser')
 				setUser(null)
 			}
