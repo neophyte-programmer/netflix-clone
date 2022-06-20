@@ -10,18 +10,13 @@ const App = () => {
 	return (
 		<Router>
 			<Switch>
-				<Route exact path={ROUTES.HOME}>
-					<Home />
-				</Route>
-				<Route exact path={ROUTES.BROWSE}>
-					<Browse />
-				</Route>
-				<Route exact path={ROUTES.SIGN_UP}>
-					<SignUp />
-				</Route>
+				<Route exact path={ROUTES.HOME} component={Home} />
+
+				<Route exact path={ROUTES.BROWSE} component={Browse} />
+
+				<Route exact path={ROUTES.SIGN_UP} component={SignUp} />
+
 				<Route exact path={ROUTES.SIGN_IN} component={SignIn} />
-				{/* <SignIn />
-				</Route> */}
 			</Switch>
 		</Router>
 	)
