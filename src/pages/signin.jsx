@@ -63,7 +63,7 @@ const SignIn = () => {
           <Form.SmallText>This page is protected by Google reCAPTCHA to ensure you're not a bot</Form.SmallText>
 				</Form>
 			</HeaderContainer>
-			<FooterContainer> </FooterContainer>
+			<FooterContainer /> 
 		</>
 	)
 }
