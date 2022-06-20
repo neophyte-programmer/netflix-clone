@@ -1,10 +1,13 @@
 import React, { useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 import { FirebaseContext } from '../context/firebase'
 import { FooterContainer } from '../containers/footerContainer'
 import { HeaderContainer } from '../containers/headerContainer'
 import Form from '../components/form/form'
+import * as ROUTES from '../constants/routes'
 
 const SignIn = () => {
+  const history = useHistory()
   const { firebase} = useContext(FirebaseContext)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
@@ -14,7 +17,16 @@ const SignIn = () => {
   const handleSignIn = (e) => {
     e.preventDefault()
 
-    // implement Firebase 
+    // implement Firebase with promise
+    firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+      // redirect to browse page when user is signed in
+      history.push(ROUTES.BROWSE)
+    }).catch((error) => {
+      // If there is an error, set the email and password to empty strings and set the error to the error message
+      setEmail('')
+      setPassword('')
+      setError(error.message)
+    })
   } 
 
   // If password or email is empty, isInvalid will be true
