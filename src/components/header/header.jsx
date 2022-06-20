@@ -21,8 +21,8 @@ const HeaderLogo = ({ to, ...restProps }) => {
     )
 }
 
-const HeaderButtonLink = ({ children, ...restProps }) => { 
-    return <ButtonLink {...restProps}>{children}</ButtonLink>
+const HeaderButtonLink = ({ to, children, ...restProps }) => { 
+    return <ButtonLink to={to} {...restProps}>{children}</ButtonLink>
 }
 
 
