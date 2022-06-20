@@ -8,12 +8,13 @@ import { FirebaseContext } from './context/firebase'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-	<React.StrictMode>
+	// Removing React.StrictMode from here because it is interrupting my routing
+	// <React.StrictMode>
 		<>
 			<FirebaseContext.Provider value={{ firebase }}>
 				<GlobalStyles />
 				<App />
 			</FirebaseContext.Provider>
 		</>
-	</React.StrictMode>
+	// </React.StrictMode>
 )
