@@ -66,6 +66,11 @@ export const Text = styled.p`
 export const Entities = styled.div`
   display: flex;
   flex-direction: row;
+  
+  @media (max-width: 700px) {
+    max-width: 100vw;
+    overflow: auto;
+  }
 `;
 
 export const Meta = styled.div`
@@ -84,6 +89,10 @@ export const Image = styled.img`
   height: auto;
   padding: 0;
   margin: 0;
+
+  @media (max-width: 700px) {
+    min-width: 200px;
+  }
 `;
 
 export const Item = styled.div`
@@ -99,12 +108,12 @@ export const Item = styled.div`
     z-index: 99;
   }
 
-  @media (min-width: 1200px) {
+//   @media (min-width: 1200px) {
     &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
       display: block;
       z-index: 100;
     }
-  }
+//   }
 
   &:first-of-type {
     margin-left: 56px;
