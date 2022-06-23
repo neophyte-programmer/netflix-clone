@@ -32,7 +32,7 @@ export const FooterContainer = () => {
                 </Footer.Column>
             </Footer.Row>
             <Footer.Break />
-            <Footer.Text> Netflix Ghana </Footer.Text>
+            <Footer.Text> This application was built by Nutifafa Afi Attor </Footer.Text>
 		</Footer>
 	)
 }
