@@ -49,7 +49,8 @@ export const Title = styled.p`
 
 export const Text = styled.p`
     font-size: .9rem;
-    color: #757575;
+    color: #DC1A28;
     margin-bottom: 40px;
+    font-weight: 600;
 `
 
