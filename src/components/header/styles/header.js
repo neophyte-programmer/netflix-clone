@@ -91,7 +91,7 @@ export const Feature = styled(Container)`
 		flex-direction: column;
 		width: 90%;
 		margin: 0 auto;
-		bottom: 20%;
+		bottom: 45%;
 	}
 `
 
