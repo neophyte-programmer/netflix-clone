@@ -30,6 +30,11 @@ export const Group = styled.div`
   flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
+  margin-top: 200px;
+
+  @media (max-width: 1000px) {
+    margin-top: 70px;
+  }
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
