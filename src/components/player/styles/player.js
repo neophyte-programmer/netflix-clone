@@ -50,7 +50,7 @@ export const Close = styled.button`
     content: ' ';
     height: 22px;
     width: 2px;
-    background-color: #333;
+    background-color: #fff;
   }
 
   &:before {
