@@ -25,20 +25,27 @@ export const Container = styled.div`
   }
 `;
 
+export const SpaceBetween = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+`;
+
 export const Group = styled.div`
   display: flex;
   flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
-  margin-top: 200px;
+  // margin-top: 200px;
 
   @media (max-width: 1000px) {
-    margin-top: 70px;
+    // margin-top: 70px;
   }
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
-      margin-top: -100px;
+      // margin-top: -100px;
     }
   }
 `;
@@ -161,9 +168,10 @@ export const FeatureText = styled.p`
 
 export const Feature = styled.div`
   display: flex;
-  flex-direction: cloumn;
+  flex-direction: column;
   background: url(${({ src }) => src});
   background-size: contain;
+  object-fit:cover
   position: relative;
   height: 360px;
   background-position-x: right;
@@ -174,7 +182,7 @@ export const Feature = styled.div`
     height: auto;
     // background-size: auto;
     object-fit: cover;
-    background-position-x: left;
+    background-position-x: center;
 
     ${Title} {
       font-size: 20px;
@@ -194,8 +202,8 @@ export const FeatureTitle = styled(Title)`
 export const FeatureClose = styled.button`
   color: white;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0px;
+  top: -3px;
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -209,6 +217,7 @@ export const FeatureClose = styled.button`
 export const Content = styled.div`
   margin: 56px;
   max-width: 500px;
+  height: fit-content;
   line-height: normal;
 
   @media (max-width: 1000px) {
