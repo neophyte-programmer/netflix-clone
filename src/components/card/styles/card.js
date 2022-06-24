@@ -71,6 +71,10 @@ export const Entities = styled.div`
     max-width: 100vw;
     overflow: auto;
   }
+
+  &::-webkit-scrollbar {
+    display:none
+  }
 `;
 
 export const Meta = styled.div`
@@ -145,9 +149,12 @@ export const FeatureText = styled.p`
   color: white;
   font-weight: ${({ fontWeight }) => (fontWeight === 'bold' ? 'bold' : 'normal')};
   margin: 0;
-
+  
   @media (max-width: 600px) {
-    line-height: 22px;
+      line-height: 22px;
+      padding: .5rem;
+      background-color: rgba(0,0,0,.4);
+      border-radius: 1rem;
   }
 `;
 
