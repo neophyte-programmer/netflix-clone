@@ -78,8 +78,8 @@ const CardFeature = ({ children, category, ...restProps }) => {
 
 	// if showFeature is true, show the feature else return null
 	return showFeature ? (
-        <Feature
-            {...restProps}
+		<Feature
+			{...restProps}
 			src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
 		>
 			<Content>
@@ -89,16 +89,22 @@ const CardFeature = ({ children, category, ...restProps }) => {
 					<img src='/images/icons/close.png' alt='Close' />
 				</FeatureClose>
 			</Content>
-			<Group margin='30px 5px' flexDirection='row' alignItems='center'>
-                <Maturity rating={itemFeature.maturity}>
-                    {/* If the maturity is less than 13 display PG else display the rating itself */}
+			<Group
+				margin='0px 5px'
+				flexDirection='row'
+				alignItems='center'
+			>
+				<Maturity rating={itemFeature.maturity}>
+					{/* If the maturity is less than 13 display PG else display the rating itself */}
 					{itemFeature.maturity < 13 ? 'PG' : itemFeature.maturity}
-                </Maturity>
-                <FeatureText fontWeight="bold">
-                    {/* Capitalising the first letter  */}
-                    {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
-                </FeatureText>
+				</Maturity>
+				<FeatureText fontWeight='bold'>
+					{/* Capitalising the first letter  */}
+					{itemFeature.genre.charAt(0).toUpperCase() +
+						itemFeature.genre.slice(1)}
+				</FeatureText>
 			</Group>
+			{children}
 		</Feature>
 	) : null
 }
