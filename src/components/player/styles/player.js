@@ -17,9 +17,9 @@ export const Overlay = styled.div`
 
 export const Inner = styled.div`
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
 
   video {
     height: 100%;
@@ -37,6 +37,10 @@ export const Close = styled.button`
   background-color: transparent;
   border: 0;
   cursor: pointer;
+
+  @media (max-width: 700px){
+    opacity: .8;
+  }
 
   &:hover {
     opacity: 1;
@@ -76,6 +80,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   padding-left: 0;
+  margin: 20px 0 0 50px;
 
   &:hover {
     transform: scale(1.05);
