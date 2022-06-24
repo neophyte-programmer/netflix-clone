@@ -15,6 +15,7 @@ import {
 	Meta,
 	Item,
 	Image,
+	SpaceBetween
 } from './styles/card'
 
 export const FeatureContext = createContext()
@@ -34,6 +35,9 @@ const Card = ({ children, ...restProps }) => {
 
 const CardGroup = ({ children, ...restProps }) => {
 	return <Group {...restProps}>{children}</Group>
+}
+const CardSpaceBetween = ({ children, ...restProps }) => {
+	return <SpaceBetween {...restProps}>{children}</SpaceBetween>
 }
 const CardTitle = ({ children, ...restProps }) => {
 	return <Title {...restProps}> {children} </Title>
@@ -83,14 +87,17 @@ const CardFeature = ({ children, category, ...restProps }) => {
 			src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
 		>
 			<Content>
+				<SpaceBetween>
+
 				<FeatureTitle>{itemFeature.title}</FeatureTitle>
-				<FeatureText>{itemFeature.description}</FeatureText>
 				<FeatureClose onClick={() => setShowFeature(false)}>
 					<img src='/images/icons/close.png' alt='Close' />
 				</FeatureClose>
+				</SpaceBetween>
+				<FeatureText>{itemFeature.description}</FeatureText>
 			</Content>
 			<Group
-				margin='0px 5px'
+				margin='0px 50px'
 				flexDirection='row'
 				alignItems='center'
 			>
@@ -110,6 +117,7 @@ const CardFeature = ({ children, category, ...restProps }) => {
 }
 
 Card.Group = CardGroup
+Card.SpaceBetween = CardSpaceBetween
 Card.Title = CardTitle
 Card.SubTitle = CardSubTitle
 Card.Text = CardText
