@@ -100,7 +100,7 @@ export const BrowseContainer = ({ slides }) => {
 			</Header>
 
 			{/* Extracting and maping over data */}
-			<Card.Group>
+			<Card.Group style={{margin: '70px 0 0 0'}}>
 				{slideRows.map((slideItem) => (
 					<Card key={`${category}-${slideItem.title.toLowerCase()}`}>
 						<Card.Title>{slideItem.title}</Card.Title>
