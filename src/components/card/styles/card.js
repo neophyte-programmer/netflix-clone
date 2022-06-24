@@ -103,17 +103,25 @@ export const Item = styled.div`
   cursor: pointer;
   transition: transform 0.2s;
 
+
   &:hover {
     transform: scale(1.3);
     z-index: 99;
   }
 
-//   @media (min-width: 1200px) {
-    &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
+@media (max-width: 900px) {
+    &:hover {
+
+        transform: scale(1.05)
+    }
+}
+
+  @media (min-width: 1200px) {
+     &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
       display: block;
       z-index: 100;
     }
-//   }
+  }
 
   &:first-of-type {
     margin-left: 56px;
@@ -145,7 +153,7 @@ export const FeatureText = styled.p`
 
 export const Feature = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: cloumn;
   background: url(${({ src }) => src});
   background-size: contain;
   position: relative;
@@ -156,7 +164,9 @@ export const Feature = styled.div`
 
   @media (max-width: 1000px) {
     height: auto;
-    background-size: auto;
+    // background-size: auto;
+    object-fit: cover;
+    background-position-x: left;
 
     ${Title} {
       font-size: 20px;
@@ -164,7 +174,7 @@ export const Feature = styled.div`
       margin-bottom: 10px;
     }
     ${FeatureText} {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 `;
@@ -181,10 +191,10 @@ export const FeatureClose = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: 0;
-
+  
   img {
-    filter: brightness(0) invert(1);
-    width: 24px;
+      filter: brightness(0) invert(1);
+      width: 24px;
   }
 `;
 
