@@ -66,10 +66,10 @@ export const Text = styled.p`
 export const Entities = styled.div`
   display: flex;
   flex-direction: row;
+  max-width: 100vw;
+  overflow: auto;
   
   @media (max-width: 700px) {
-    max-width: 100vw;
-    overflow: auto;
   }
 
   &::-webkit-scrollbar {
@@ -93,7 +93,8 @@ export const Image = styled.img`
   height: auto;
   padding: 0;
   margin: 0;
-
+  min-width: 250px;
+  
   @media (max-width: 700px) {
     min-width: 200px;
   }
