@@ -31,7 +31,7 @@ This is a netflix clone project. It has multiple pages which are linked together
 - [Netflix](https://www.netflix.com/gh/)
 
 ## Demo 
-You can see the demo [here]()
+I am current having issues with deployments so a live version of the app is not available yet 
 
 ## How it looks
 
