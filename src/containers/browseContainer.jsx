@@ -4,6 +4,7 @@ import { FirebaseContext } from '../context/firebase'
 import { useContext, useState, useEffect } from 'react'
 import Loading from '../components/loading/loading'
 import Header from '../components/header/header'
+import Player from '../components/player/player'
 import * as ROUTES from '../constants/routes'
 import logo from '../logo.png'
 import { PlayButton } from '../components/header/styles/header'
@@ -122,10 +123,10 @@ export const BrowseContainer = ({ slides }) => {
 							))}
 						</Card.Entities>
 						<Card.Feature category={category}>
-							{/* <Player>
+							<Player>
 								<Player.Button />
 								<Player.Video src="/videos/intro.mp4" />
-							</Player> */}
+							</Player>
 						</Card.Feature>
 					</Card>
 				))}
